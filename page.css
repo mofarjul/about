@@ -1,0 +1,18 @@
+/* Page-level styles for the About page (sits on top of styles.css). */
+@property --in { syntax: '<number>'; inherits: true; initial-value: 0; }
+
+html, body { margin: 0; background: #201e1d; }
+/* clip (not hidden) so the sticky scroll scenes keep working */
+body { overflow-x: clip; }
+
+a { color: #ae1800; }
+a:hover { color: #ec3013; }
+details summary::-webkit-details-marker { display: none; }
+
+.hv-100:hover { background: var(--color-accent-100) !important; }
+.hv-600:hover { background: var(--color-accent-600) !important; }
+
+/* Visitors who ask for less motion get the page without the smoothing/intro. */
+@media (prefers-reduced-motion: reduce) {
+  #root { transition: none !important; }
+}
